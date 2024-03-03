@@ -10,6 +10,7 @@ const vechime = document.querySelector('.vechime input')
 const totalSalariu = document.querySelector('.totalSalariu')
 const tichete = document.querySelector('.tichete input')
 const ticheteAfisare = document.querySelector('.ticheteAfisare')
+const sarbatoriLegale = document.querySelector('.sarbatoriLegale input')
 
 // console.log(searchBox, searchBtn);
 // console.log(Number(cupe.value)* 0.01);
@@ -21,7 +22,9 @@ const ticheteAfisare = document.querySelector('.ticheteAfisare')
 searchBtn.addEventListener('click', ()=>{
     const calculTichete = Number(tichete.value) * 30
     const calculVechime = Number(vechime.value) * 50
+    const sarbatoriCalcul = Number(sarbatoriLegale.value) *150
 
+    
     const calculateTotal =  (Number(searchBox1.value * 0.01) + 
     Number(searchBox2.value * 0.01) + 
     Number(searchBox3.value * 0.01) + 
@@ -29,10 +32,12 @@ searchBtn.addEventListener('click', ()=>{
     Number(searchBox2.value * 0.01) + 
     Number(searchBox3.value * 0.01) + 
     Number(searchBox4.value * 0.01) ) /100 * 19 + 600 + Number(cupe.value)* 0.01
-  
-    afisareTotal.textContent = calculateTotal + calculVechime
-    totalSalariu.textContent = calculateTotal + 1500 + calculVechime
+    
+    
+    afisareTotal.textContent = calculateTotal + calculVechime + sarbatoriCalcul
+    totalSalariu.textContent = calculateTotal + 1500 + calculVechime + sarbatoriCalcul
     ticheteAfisare.textContent = calculTichete
+  
     // console.log(totals);
 
     //   console.log( calculateTotal);
@@ -43,4 +48,5 @@ searchBtn.addEventListener('click', ()=>{
     cupe.value = ''
     vechime.value = ''
     tichete.value = ''
+    sarbatoriLegale.value = ''
 })
