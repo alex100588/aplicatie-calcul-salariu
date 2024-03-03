@@ -1,5 +1,5 @@
 body{
-    background:url(img/2.jpg) ;
+    background:url(img/4.jpg);
 }
 
 .textColor{
@@ -8,7 +8,18 @@ body{
     font-family: sans-serif;
 }
 
-
 .removeMarginTop{
     margin: 0;
 }
+
+.alignAll{
+  width: 50%;
+  margin: 0 auto;
+
+}
+
+@media only screen and (max-width: 800px) {
+    .alignAll{
+      width: 100%;
+      }
+} 
